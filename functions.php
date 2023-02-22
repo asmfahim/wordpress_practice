@@ -1,4 +1,15 @@
 <?php
+/**
+ * Boss theme functions
+ * 
+ * @package boss
+ */
+
+ if( ! defined('BOSS_DIR_PATH')){
+    defined('BOSS_DIR_PATH',untrailingslashit( get_template_directory(  ) ));
+ }
+
+ require_once BOSS_DIR_PATH .'/inc/helpers/autoloader.php';
 
 function boss_enqueue_scripts(){
     //It is a good practice use in wp_register_(style/script) you can also condition this procese

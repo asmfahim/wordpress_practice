@@ -6,7 +6,7 @@
  */
 
  if( ! defined('BOSS_DIR_PATH')){
-    defined('BOSS_DIR_PATH',untrailingslashit( get_template_directory(  ) ));
+    define('BOSS_DIR_PATH',untrailingslashit( get_template_directory(  ) ));
  }
 
  require_once BOSS_DIR_PATH .'/inc/helpers/autoloader.php';

@@ -11,6 +11,12 @@
 
  require_once BOSS_DIR_PATH .'/inc/helpers/autoloader.php';
 
+ function boss_get_theme_instance(){
+    \BOSS_THEME\Inc\BOSS_THEME::get_instance();
+
+ }
+ boss_get_theme_instance();
+
 function boss_enqueue_scripts(){
     //It is a good practice use in wp_register_(style/script) you can also condition this procese
     //This is register Style.css

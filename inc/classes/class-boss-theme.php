@@ -31,10 +31,14 @@
         
         add_theme_support( 'title-tag' ); //add Title
         //This is for logo
-        add_theme_support( 'custom-logo', array(
-            'height' => 480,
-            'width'  => 720,
-        ) );
+        add_theme_support( 'custom-logo', [
+            'height'               => 100,
+            'width'                => 400,
+            'flex-height'          => true,
+            'flex-width'           => true,
+            'header-text'          => ['site-title', 'site-description' ],
+            'unlink-homepage-logo' => true,
+        ] );
     }
 
 

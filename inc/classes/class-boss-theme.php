@@ -24,7 +24,17 @@
 
     protected function setup_hooks(){
         //add action and filters
+        add_action('after_setup_theme',[$this,'setup_theme']);
+    }
+
+    public function setup_theme(){
         
+        add_theme_support( 'title-tag' ); //add Title
+        //This is for logo
+        add_theme_support( 'custom-logo', array(
+            'height' => 480,
+            'width'  => 720,
+        ) );
     }
 
 

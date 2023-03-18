@@ -16,6 +16,7 @@
 
     protected  function __construct( ){
         //load classes.
+        Menus::get_instance();
         Assets::get_instance();
         // wp_die( 'hello' );
 

@@ -37,5 +37,17 @@ public function register_menus(){
 
 }
 
+public function get_menu_id($location){
+
+  //Get All menu location
+  $locations = get_nav_menu_locations(  );
+
+  //Get menu location id
+  $menu_id = $locations[$location];
+
+  return !empty( $menu_id ) ? $menu_id : ' ' ;
+
+}
+
 
 }

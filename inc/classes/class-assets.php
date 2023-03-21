@@ -38,11 +38,15 @@ public function register_scripts(){
 
     //This is register main.js
     wp_register_script( 'main-js', BOSS_DIR_URI.'/assets/main.js', [], filemtime(BOSS_DIR_PATH.'/assets/main.js'), true ); 
-    wp_register_script( 'bootstrap-js', BOSS_DIR_URI.'/assets/src/bootstrap/js/bootstrap.min.js', ['jquery'], false, true ); 
+    wp_register_script( 'bootstrap-bundle-js', BOSS_DIR_URI.'/assets/src/bootstrap/js/bootstrap.bundle.min.js', ['jquery'], false, true ); 
+    // wp_register_script( 'bootstrap-js', BOSS_DIR_URI.'/assets/src/bootstrap/js/bootstrap.min.js', ['jquery','bootstrap-bundle-js'], false, true ); 
+
+    
 
     //This is enqueue scripts
     wp_enqueue_script( 'main-js' );
-    wp_enqueue_script( 'bootstrap-js' );
+    wp_enqueue_script( 'bootstrap-bundle-js' );
+    // wp_enqueue_script( 'bootstrap-js' );
 
 }
 

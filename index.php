@@ -10,7 +10,7 @@ get_header();
     <div id="primary">
         <main id="main" class="site-main mt-3" role="main">
             <?php
-                if(have_posts(  )){
+                if(have_posts(  )) :
                     ?>
                         <div class="container">
                             <?php
@@ -38,11 +38,9 @@ get_header();
                                             
                                     <?php
                                          }
-                                    ?>
-                                        <h4><?php the_title( ); ?></h4>
-                                        <div><?php the_excerpt(  ); ?> </div>
+                                         
+                                         get_template_part( 'template-parts/content' );
 
-                                    <?php
                                         $index +=1;
 
                                     if(0 !== $index && 0 === $index % $no_of_col ){
@@ -50,18 +48,15 @@ get_header();
                                         </div>
                                         <?php
                                     }
-
-                                    // the_title(  );
-                                    // echo '</br></br>';
-                                    // the_excerpt(  );
-                                    // echo '</br></br>................................ </br>';
                                 endwhile;
                             ?>
                             </div>
                         </div>
 
                     <?php 
-                } 
+                    else :
+                        get_template_part( 'template-parts/content-none' );
+                endif; 
             ?>
         </main>
     </div>

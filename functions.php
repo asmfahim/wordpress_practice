@@ -14,6 +14,7 @@
 }
 
  require_once BOSS_DIR_PATH .'/inc/helpers/autoloader.php';
+ require_once BOSS_DIR_PATH .'/inc/helpers/template-tags.php';
 
  function boss_get_theme_instance(){
     \BOSS_THEME\Inc\BOSS_THEME::get_instance();

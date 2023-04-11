@@ -11,3 +11,8 @@ Tags: blog,theme
 Text Domain: boss
 
 */
+
+img{
+    width: 100%;
+    height: auto;
+}

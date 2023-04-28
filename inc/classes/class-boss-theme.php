@@ -18,6 +18,7 @@
         //load classes.
         Menus::get_instance();
         Assets::get_instance();
+        Meta_Boxes::get_instance();
         // wp_die( 'hello' );
 
         $this->setup_hooks();

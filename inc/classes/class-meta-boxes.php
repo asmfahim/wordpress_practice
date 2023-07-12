@@ -20,6 +20,7 @@ class Meta_Boxes{
   protected function setup_hooks(){
     //add action and filters
     add_action('add_meta_boxes',[$this , 'add_custom_meta_box'] );
+    add_action('save_post',[$this ,'save_post_meta_data']);
 }
 
 public function add_custom_meta_box(){
@@ -41,20 +42,30 @@ public function custom_meta_box_html( $post ){
 
     ?>
     <label for="boss-field"> <?php esc_html_e('Hide the page title','boss'); ?> </label>
-    <select name="boss_field" id="boss-field" >
+    <select name="boss_hide_title_field" id="boss-field" class="postbox" >
         <option value="">
             <?php esc_html_e('Select','boss'); ?> 
         </option>
-        <option value="yes" <?php selected( $value , 'yes' ); ?> >
+        <option value="yes" <?php selected( $value,'yes' ) ?> >
             <?php esc_html_e('Yes','boss'); ?> 
         </option>
-        <option value="no" <?php selected( $value , 'no' ); ?> > 
+        <option value="no" <?php selected( $value, 'no' ) ?> > 
             <?php esc_html_e('No','boss'); ?> 
         </option>
     </select>
 
     <?php
 
+}
+
+public function save_post_meta_data($post_id ){
+    if ( array_key_exists( 'boss_hide_title_field', $_POST ) ) {
+        update_post_meta(
+            $post_id,
+            '_hide_page_title',
+            $_POST['boss_hide_title_field']
+        );
+    }
 }
 
 

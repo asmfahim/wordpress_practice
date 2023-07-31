@@ -8,5 +8,8 @@
  ?>
 
  <div class="entry-meta mb-3">
-    <?php boss_posted_on(); ?>
+    <?php 
+    boss_posted_on(); 
+    boss_posted_by();
+    ?>
  </div>

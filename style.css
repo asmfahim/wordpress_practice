@@ -24,3 +24,7 @@ img{
 .nav-item:hover .dropdown-menu:not(.show){
     display: block;
 }
+
+.boss-read-more{
+    text-decoration: none;
+}

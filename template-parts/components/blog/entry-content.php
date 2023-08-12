@@ -21,6 +21,7 @@
          );
     }else{
         boss_the_excerpt( 200 );
+        echo boss_excerpt_more();
     }
      ?>
 </div>

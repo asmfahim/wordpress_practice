@@ -22,6 +22,12 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			)
 		);
+        wp_link_pages( 
+            [
+                'before' => '<div class="page-link">' . esc_html__( 'Page: ', 'boss' ),
+                'after'  => '</div>'
+            ]
+            );
     }else{
         boss_the_excerpt( 200 );
         echo boss_excerpt_more();
